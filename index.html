@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pengumuman Staff Partner 11th Physics Summit</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
     * {
       box-sizing: border-box;
@@ -105,19 +105,21 @@
 
     .hero {
       position: relative;
-      padding: 34px 34px 20px;
+      padding: 42px 34px 24px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       background:
         linear-gradient(120deg, rgba(25, 215, 242, 0.1), transparent 42%),
         linear-gradient(270deg, rgba(255, 69, 165, 0.14), transparent 48%);
+      text-align: center;
     }
 
     .brand-row {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 18px;
+      justify-content: center;
+      gap: 14px;
       margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
     .badge {
@@ -170,20 +172,24 @@
     }
 
     h1 {
-      font-family: 'Abril Fatface', Georgia, serif;
-      font-size: clamp(42px, 8vw, 86px);
-      line-height: 0.98;
-      letter-spacing: 0.02em;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
       color: #ffffff;
       margin-bottom: 14px;
+      text-align: center;
       text-shadow: 0 12px 34px rgba(0,0,0,0.35);
     }
 
     .subtitle {
-      max-width: 690px;
+      max-width: 620px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: clamp(15px, 2.4vw, 18px);
       line-height: 1.7;
+      text-align: center;
     }
 
     .content {
@@ -288,9 +294,11 @@
     }
 
     .success-title {
-      font-family: 'Abril Fatface', Georgia, serif;
-      font-size: clamp(40px, 7vw, 76px);
-      line-height: 1;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.06;
       margin-bottom: 16px;
     }
 
@@ -315,24 +323,18 @@
 
     .action-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 14px;
       margin: 20px auto 16px;
-      max-width: 720px;
+      max-width: 520px;
     }
 
     .link-btn.primary {
-      grid-column: 1 / -1;
       color: #0b1028;
       background: linear-gradient(90deg, var(--yellow), var(--magenta), var(--cyan));
     }
 
-    .link-btn.whatsapp {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
+    
     .important-note {
       max-width: 720px;
       margin: 20px auto 0;
@@ -440,24 +442,18 @@
         </div>
         <p class="success-text">
           Kamu dinyatakan <strong>lolos seleksi berkas Staff Partner 11th Physics Summit</strong>.
-          Informasi pembagian pos, waktu, dan teknis seleksi lanjutan dapat dilihat melalui file pengumuman resmi berikut.
+          Untuk melihat jadwal seleksi lanjutan, pembagian pos, CP reschedule, dan informasi lainnya,
+          silakan buka file pengumuman resmi berikut.
         </p>
 
         <div class="action-grid">
           <a class="link-btn primary" href="https://intip.in/lolosberkas11ps" target="_blank" rel="noopener">
             Buka File Pengumuman Resmi
           </a>
-          <a class="link-btn whatsapp" id="cpGeneral" href="#" target="_blank" rel="noopener">
-            CP General
-          </a>
-          <a class="link-btn whatsapp" id="cpReschedule" href="#" target="_blank" rel="noopener">
-            CP Reschedule
-          </a>
         </div>
 
         <p class="important-note">
-          Apabila berhalangan hadir pada seleksi lanjutan, peserta wajib menghubungi CP Reschedule
-          paling lambat tanggal 22 pukul 21.00 WIB.
+          Informasi jadwal seleksi lanjutan, pembagian pos, dan CP reschedule tertera pada file pengumuman resmi.
         </p>
 
         <button class="back-btn" onclick="kembali()">Cek NRP lain</button>
@@ -466,17 +462,6 @@
   </main>
 
   <script>
-    // EDIT CP DI SINI
-    const CP_GENERAL = {
-      label: "CP General - Salwa",
-      url: "https://wa.me/6281362192288?text=Halo%20Kak%2C%20saya%20ingin%20bertanya%20mengenai%20pengumuman%20Staff%20Partner%2011th%20Physics%20Summit."
-    };
-
-    const CP_RESCHEDULE = {
-      label: "CP Reschedule - Salwa",
-      url: "https://wa.me/6281362192288?text=Halo%20Kak%2C%20saya%20ingin%20konfirmasi%20reschedule%20seleksi%20lanjutan%20Staff%20Partner%2011th%20Physics%20Summit."
-    };
-
     const pesertaList = [
       {
             "nrp": "5001251124",
@@ -815,10 +800,6 @@
       document.getElementById("loadStatus").textContent =
         `Data berhasil dimuat. Total ${Object.keys(dataPeserta).length} peserta terdaftar.`;
 
-      document.getElementById("cpGeneral").textContent = CP_GENERAL.label;
-      document.getElementById("cpGeneral").href = CP_GENERAL.url;
-      document.getElementById("cpReschedule").textContent = CP_RESCHEDULE.label;
-      document.getElementById("cpReschedule").href = CP_RESCHEDULE.url;
     }
 
     function cekPengumuman() {
