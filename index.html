@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Pengumuman Lolos Berkas Staff Partner 11th Physics Summit</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap');
 
     * {
       box-sizing: border-box;
@@ -15,13 +16,16 @@
     }
 
     :root {
-      --navy: #0f1638;
-      --cyan: #22d3ee;
-      --pink: #ff4fa3;
+      --navy: #0c1230;
+      --navy-2: #121947;
+      --cyan: #3fd8ff;
+      --blue: #7aa8ff;
+      --pink: #ff67b3;
+      --pink-soft: #ff92cb;
       --purple: #9b5cf5;
-      --yellow: #f5b400;
+      --yellow: #ffb000;
       --white: #f8f9ff;
-      --muted: #c8cdea;
+      --muted: #d8def7;
       --card: rgba(18, 24, 62, 0.86);
       --line: rgba(255, 255, 255, 0.13);
     }
@@ -32,10 +36,10 @@
       color: var(--white);
       overflow-x: hidden;
       background:
-        radial-gradient(circle at 12% 18%, rgba(34, 211, 238, 0.22), transparent 25%),
-        radial-gradient(circle at 88% 12%, rgba(255, 79, 163, 0.20), transparent 25%),
-        radial-gradient(circle at 50% 100%, rgba(155, 92, 245, 0.23), transparent 35%),
-        linear-gradient(135deg, #0c1230 0%, #121947 48%, #0b1028 100%);
+        radial-gradient(circle at 12% 18%, rgba(63, 216, 255, 0.24), transparent 25%),
+        radial-gradient(circle at 88% 12%, rgba(255, 103, 179, 0.22), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(155, 92, 245, 0.24), transparent 35%),
+        linear-gradient(135deg, #0b1028 0%, #121947 48%, #0a0f2a 100%);
     }
 
     .bg-layer {
@@ -71,7 +75,7 @@
       height: 26px;
       background: linear-gradient(90deg, transparent, var(--cyan), var(--pink), transparent);
       clip-path: polygon(0 45%, 72% 0, 100% 50%, 72% 100%, 0 55%);
-      opacity: .7;
+      opacity: .72;
       transform: rotate(-18deg);
       animation: meteorFloat 6s ease-in-out infinite;
     }
@@ -86,7 +90,7 @@
       right: 70px;
       width: 110px;
       background: linear-gradient(90deg, transparent, var(--purple), var(--cyan), transparent);
-      opacity: .55;
+      opacity: .58;
       animation-delay: 1.5s;
     }
 
@@ -171,12 +175,13 @@
     }
 
     .hero {
-      padding: 42px 34px 26px;
+      padding: 48px 34px 30px;
       text-align: center;
       border-bottom: 1px solid var(--line);
       background:
-        linear-gradient(120deg, rgba(34, 211, 238, 0.07), transparent 42%),
-        linear-gradient(270deg, rgba(255, 79, 163, 0.09), transparent 50%);
+        radial-gradient(circle at top left, rgba(63, 216, 255, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(255, 103, 179, 0.16), transparent 30%),
+        linear-gradient(135deg, rgba(17, 30, 80, 0.95), rgba(34, 18, 72, 0.92));
     }
 
     .hero-badges {
@@ -184,36 +189,72 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
+      gap: 14px;
+      margin-bottom: 26px;
     }
 
     .badge {
-      padding: 12px 18px;
+      padding: 12px 22px;
       border-radius: 999px;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #ffffff;
       font-size: 15px;
       font-weight: 800;
-      color: white;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     }
 
-    h1 {
-      font-size: clamp(31px, 5vw, 62px);
-      font-weight: 900;
-      line-height: 1.08;
-      letter-spacing: -0.05em;
-      margin-bottom: 14px;
-      text-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    .hero-title {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 18px;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-title-top {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: #9ad8ff;
+    }
+
+    .hero-title-main {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(46px, 8vw, 86px);
+      font-weight: 800;
+      background: linear-gradient(90deg, #48d7ff 0%, #7cc8ff 28%, #ff67b3 70%, #ff92cb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 10px 30px rgba(72, 215, 255, 0.12);
+    }
+
+    .hero-title-mid {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hero-title-bottom {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(22px, 3.4vw, 34px);
+      font-weight: 700;
+      color: #ff8fcb;
     }
 
     .subtitle {
-      max-width: 660px;
+      max-width: 700px;
       margin: 0 auto;
       color: var(--muted);
-      font-size: clamp(15px, 2.2vw, 18px);
-      line-height: 1.75;
+      font-size: clamp(15px, 2vw, 19px);
+      line-height: 1.8;
       font-weight: 500;
+    }
+
+    .subtitle strong {
+      color: #7ad9ff;
     }
 
     .content {
@@ -273,8 +314,8 @@
 
     .main-btn {
       color: #091025;
-      background: linear-gradient(90deg, var(--cyan), var(--pink), var(--yellow));
-      box-shadow: 0 14px 34px rgba(255, 79, 163, 0.20);
+      background: linear-gradient(90deg, #3fd8ff 0%, #7aa8ff 35%, #ff67b3 70%, #ffb000 100%);
+      box-shadow: 0 14px 34px rgba(255, 79, 163, 0.24);
     }
 
     .main-btn:hover,
@@ -459,8 +500,12 @@
         padding: 22px;
       }
 
-      h1 {
-        font-size: clamp(28px, 9vw, 42px);
+      .hero-title-main {
+        font-size: clamp(42px, 12vw, 62px);
+      }
+
+      .hero-title-mid {
+        font-size: clamp(28px, 8vw, 42px);
       }
 
       .atom-a {
@@ -518,10 +563,16 @@
           <div class="badge">Staff Partner</div>
         </div>
 
-        <h1>Pengumuman Lolos Berkas Staff Partner 11th Physics Summit</h1>
+        <h1 class="hero-title">
+          <span class="hero-title-top">Pengumuman</span>
+          <span class="hero-title-main">Lolos Berkas</span>
+          <span class="hero-title-mid">Staff Partner</span>
+          <span class="hero-title-bottom">11th Physics Summit</span>
+        </h1>
 
         <p class="subtitle">
-          Masukkan NRP kamu untuk melihat status seleksi berkas Staff Partner 11th Physics Summit.
+          Masukkan NRP kamu untuk melihat status seleksi berkas Staff Partner
+          <strong>11th Physics Summit</strong>.
         </p>
       </div>
 
@@ -730,22 +781,13 @@
 
     function buatLinkWA(peserta) {
       const pesan =
-        "Halo Kak " + CP_RESCHEDULE_NAMA + ", saya ingin mengajukan reschedule seleksi lanjutan Staff Partner 11th Physics Summit.
-
-" +
-        "Data:
-" +
-        "Nama: " + peserta.nama + "
-" +
-        "NRP: " + peserta.nrp + "
-" +
-        "Jadwal seleksi lanjutan: " + peserta.jadwal + "
-" +
-        "Pos: " + peserta.pos + "
-
-" +
-        "Alasan berhalangan:
-";
+        "Halo Kak " + CP_RESCHEDULE_NAMA + ", saya ingin mengajukan reschedule seleksi lanjutan Staff Partner 11th Physics Summit.\n\n" +
+        "Data:\n" +
+        "Nama: " + peserta.nama + "\n" +
+        "NRP: " + peserta.nrp + "\n" +
+        "Jadwal seleksi lanjutan: " + peserta.jadwal + "\n" +
+        "Pos: " + peserta.pos + "\n\n" +
+        "Alasan berhalangan:\n";
 
       return "https://wa.me/" + CP_RESCHEDULE_WA + "?text=" + encodeURIComponent(pesan);
     }
