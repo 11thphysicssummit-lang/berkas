@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengumuman Staff Partner 11th Physics Summit</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #101538;
+      --navy-2: #171a44;
+      --cyan: #19d7f2;
+      --magenta: #ff45a5;
+      --purple: #9b4de3;
+      --yellow: #f5b400;
+      --white: #f7f8ff;
+      --muted: #bac3dc;
+      --card: rgba(16, 21, 56, 0.82);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(25, 215, 242, 0.22), transparent 26%),
+        radial-gradient(circle at 82% 20%, rgba(255, 69, 165, 0.22), transparent 28%),
+        radial-gradient(circle at 50% 100%, rgba(155, 77, 227, 0.28), transparent 34%),
+        linear-gradient(135deg, #101538 0%, #161944 48%, #0b1028 100%);
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      opacity: 0.9;
+    }
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 14px var(--white);
+      animation: twinkle 2.6s infinite ease-in-out;
+    }
+
+    .star:nth-child(1) { top: 12%; left: 10%; }
+    .star:nth-child(2) { top: 22%; left: 82%; animation-delay: .4s; }
+    .star:nth-child(3) { top: 72%; left: 18%; animation-delay: .8s; }
+    .star:nth-child(4) { top: 64%; left: 86%; animation-delay: 1.1s; }
+    .star:nth-child(5) { top: 38%; left: 62%; animation-delay: .2s; }
+    .star:nth-child(6) { top: 86%; left: 48%; animation-delay: 1.6s; }
+
+    .meteor {
+      position: fixed;
+      width: 150px;
+      height: 28px;
+      right: -80px;
+      top: 90px;
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--magenta), transparent);
+      filter: blur(0.3px);
+      clip-path: polygon(0 45%, 72% 0, 100% 50%, 72% 100%, 0 55%);
+      opacity: 0.85;
+      transform: rotate(-18deg);
+    }
+
+    .meteor.two {
+      top: 170px;
+      right: 40px;
+      width: 120px;
+      opacity: 0.72;
+      background: linear-gradient(90deg, transparent, var(--purple), var(--cyan), transparent);
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 34px 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      width: min(940px, 100%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 34px;
+      background: var(--card);
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.34);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      padding: 34px 34px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background:
+        linear-gradient(120deg, rgba(25, 215, 242, 0.1), transparent 42%),
+        linear-gradient(270deg, rgba(255, 69, 165, 0.14), transparent 48%);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .atom {
+      width: 38px;
+      height: 38px;
+      position: relative;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(25, 215, 242, 0.12);
+    }
+
+    .atom::before,
+    .atom::after {
+      content: "";
+      position: absolute;
+      inset: 6px -8px;
+      border: 2px solid var(--cyan);
+      border-radius: 50%;
+      transform: rotate(58deg);
+    }
+
+    .atom::after {
+      border-color: var(--magenta);
+      transform: rotate(-58deg);
+    }
+
+    .dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--yellow);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 16px var(--yellow);
+    }
+
+    h1 {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(42px, 8vw, 86px);
+      line-height: 0.98;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      margin-bottom: 14px;
+      text-shadow: 0 12px 34px rgba(0,0,0,0.35);
+    }
+
+    .subtitle {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: clamp(15px, 2.4vw, 18px);
+      line-height: 1.7;
+    }
+
+    .content {
+      padding: 32px 34px 36px;
+    }
+
+    .form-box {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    label {
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    input {
+      width: 100%;
+      border: 2px solid rgba(255, 255, 255, 0.14);
+      outline: none;
+      border-radius: 18px;
+      padding: 16px 18px;
+      font-size: 18px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.09);
+      transition: 0.2s ease;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 5px rgba(25, 215, 242, 0.12);
+    }
+
+    .main-btn,
+    .link-btn {
+      border: none;
+      border-radius: 18px;
+      padding: 16px 18px;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .main-btn {
+      color: #0b1028;
+      background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow));
+      box-shadow: 0 14px 36px rgba(255, 69, 165, 0.18);
+    }
+
+    .main-btn:hover,
+    .link-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .status {
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .error {
+      display: none;
+      margin-top: 18px;
+      border-radius: 18px;
+      padding: 15px 16px;
+      color: #ffd9e7;
+      background: rgba(255, 69, 165, 0.12);
+      border: 1px solid rgba(255, 69, 165, 0.28);
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    #resultPage {
+      display: none;
+    }
+
+    .result-card {
+      padding: 36px 34px;
+      text-align: center;
+    }
+
+    .success-kicker {
+      color: var(--cyan);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 10px;
+    }
+
+    .success-title {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .success-text {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 17px;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .name-box {
+      display: inline-block;
+      margin: 8px auto 24px;
+      padding: 14px 20px;
+      border-radius: 18px;
+      color: #ffffff;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-weight: 800;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px auto 16px;
+      max-width: 720px;
+    }
+
+    .link-btn.primary {
+      grid-column: 1 / -1;
+      color: #0b1028;
+      background: linear-gradient(90deg, var(--yellow), var(--magenta), var(--cyan));
+    }
+
+    .link-btn.whatsapp {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .important-note {
+      max-width: 720px;
+      margin: 20px auto 0;
+      padding: 16px;
+      border-radius: 18px;
+      color: #fff7d6;
+      background: rgba(245, 180, 0, 0.11);
+      border: 1px solid rgba(245, 180, 0, 0.28);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .back-btn {
+      margin-top: 18px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: rgba(255,255,255,0.52);
+      font-size: 13px;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.35; transform: scale(0.75); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
+
+    @media (max-width: 700px) {
+      .hero,
+      .content,
+      .result-card {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .brand-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .action-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .link-btn.primary {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true">
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+  </div>
+  <div class="meteor" aria-hidden="true"></div>
+  <div class="meteor two" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="card" id="inputPage">
+      <div class="hero">
+        <div class="brand-row">
+          <div class="badge">
+            <span class="atom"><span class="dot"></span></span>
+            11th Physics Summit
+          </div>
+          <div class="badge">Staff Partner</div>
+        </div>
+        <h1>Pengumuman Lolos Berkas</h1>
+        <p class="subtitle">
+          Masukkan NRP kamu untuk melihat status seleksi berkas Staff Partner 11th Physics Summit.
+        </p>
+      </div>
+
+      <div class="content">
+        <div class="form-box">
+          <label for="nrp">NRP</label>
+          <input id="nrp" type="text" inputmode="numeric" placeholder="Contoh: 5001251018" autocomplete="off" />
+          <button class="main-btn" id="cekButton" onclick="cekPengumuman()">Cek Hasil Seleksi</button>
+          <p class="status" id="loadStatus">Data berhasil dimuat.</p>
+        </div>
+
+        <div id="error" class="error"></div>
+        <footer>Physics Summit © 2026</footer>
+      </div>
+    </section>
+
+    <section class="card" id="resultPage">
+      <div class="result-card">
+        <p class="success-kicker">Selamat!</p>
+        <h2 class="success-title">Kamu Lolos Berkas</h2>
+        <div class="name-box">
+          <span id="namaPeserta">-</span> · <span id="nrpPeserta">-</span>
+        </div>
+        <p class="success-text">
+          Kamu dinyatakan <strong>lolos seleksi berkas Staff Partner 11th Physics Summit</strong>.
+          Informasi pembagian pos, waktu, dan teknis seleksi lanjutan dapat dilihat melalui file pengumuman resmi berikut.
+        </p>
+
+        <div class="action-grid">
+          <a class="link-btn primary" href="https://intip.in/lolosberkas11ps" target="_blank" rel="noopener">
+            Buka File Pengumuman Resmi
+          </a>
+          <a class="link-btn whatsapp" id="cpGeneral" href="#" target="_blank" rel="noopener">
+            CP General
+          </a>
+          <a class="link-btn whatsapp" id="cpReschedule" href="#" target="_blank" rel="noopener">
+            CP Reschedule
+          </a>
+        </div>
+
+        <p class="important-note">
+          Apabila berhalangan hadir pada seleksi lanjutan, peserta wajib menghubungi CP Reschedule
+          paling lambat tanggal 22 pukul 21.00 WIB.
+        </p>
+
+        <button class="back-btn" onclick="kembali()">Cek NRP lain</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // EDIT CP DI SINI
+    const CP_GENERAL = {
+      label: "CP General - Salwa",
+      url: "https://wa.me/6281362192288?text=Halo%20Kak%2C%20saya%20ingin%20bertanya%20mengenai%20pengumuman%20Staff%20Partner%2011th%20Physics%20Summit."
+    };
+
+    const CP_RESCHEDULE = {
+      label: "CP Reschedule - Salwa",
+      url: "https://wa.me/6281362192288?text=Halo%20Kak%2C%20saya%20ingin%20konfirmasi%20reschedule%20seleksi%20lanjutan%20Staff%20Partner%2011th%20Physics%20Summit."
+    };
+
+    const pesertaList = [
+      {
+            "nrp": "5001251124",
+            "nama": "Geovany Pradipta Soeprapto"
+      },
+      {
+            "nrp": "5001251094",
+            "nama": "Athian Syafiq Al Hafidz"
+      },
+      {
+            "nrp": "5001251003",
+            "nama": "Deo Gratia Putri Sinar"
+      },
+      {
+            "nrp": "5001251008",
+            "nama": "Excellent Friendly Manurung"
+      },
+      {
+            "nrp": "5001251118",
+            "nama": "Riana Salsabela Putri"
+      },
+      {
+            "nrp": "5001251032",
+            "nama": "Davina Makayla Inaira W."
+      },
+      {
+            "nrp": "5001251028",
+            "nama": "Faradhia Balqis Putri Atmaja"
+      },
+      {
+            "nrp": "5001251018",
+            "nama": "Abil Qumfa Anzir"
+      },
+      {
+            "nrp": "5001251069",
+            "nama": "Ronalius Chaniago"
+      },
+      {
+            "nrp": "5001251139",
+            "nama": "Keynal Muzaki Borsak Sianipar"
+      },
+      {
+            "nrp": "5001251070",
+            "nama": "Nurul Arina Rakhmawati"
+      },
+      {
+            "nrp": "5001251082",
+            "nama": "Kiyomi Revonica Sekeon"
+      },
+      {
+            "nrp": "5001251115",
+            "nama": "Muhammad Fatih Ilham"
+      },
+      {
+            "nrp": "5001251071",
+            "nama": "Diandra Rizky Maulana"
+      },
+      {
+            "nrp": "5001251036",
+            "nama": "Karlina Safitri"
+      },
+      {
+            "nrp": "5001251068",
+            "nama": "Aurora Anidya Putri"
+      },
+      {
+            "nrp": "5001251126",
+            "nama": "Muhammad Hafiiz Al-Alief"
+      },
+      {
+            "nrp": "5001251017",
+            "nama": "Rayna Clarisa Hamzah"
+      },
+      {
+            "nrp": "5001251138",
+            "nama": "Zidan Abdul Hafizh"
+      },
+      {
+            "nrp": "5001251099",
+            "nama": "Putri Syahara Mandasari"
+      },
+      {
+            "nrp": "5001251085",
+            "nama": "Aisyah Putri Kusumo Pradana"
+      },
+      {
+            "nrp": "5001251119",
+            "nama": "Akbar Shalahuddin"
+      },
+      {
+            "nrp": "5001251062",
+            "nama": "Radith Zahran Azka"
+      },
+      {
+            "nrp": "5001251026",
+            "nama": "Dea Rosi At Thahirah"
+      },
+      {
+            "nrp": "5001251074",
+            "nama": "Alsa Nadhirah"
+      },
+      {
+            "nrp": "5001251129",
+            "nama": "Agnes Dwita Rachmadani"
+      },
+      {
+            "nrp": "5001251007",
+            "nama": "Zahwa Ayu Fatika"
+      },
+      {
+            "nrp": "5001251044",
+            "nama": "Bimo Ardyansyah"
+      },
+      {
+            "nrp": "5001251098",
+            "nama": "Rengga Abbas Saputra"
+      },
+      {
+            "nrp": "5001251143",
+            "nama": "Bryan Hafizh Tri Haditya"
+      },
+      {
+            "nrp": "5001251121",
+            "nama": "Zaki Amirul Hadi"
+      },
+      {
+            "nrp": "5001251076",
+            "nama": "Mukhammad Dzulkifli Nizamuddin"
+      },
+      {
+            "nrp": "5001251112",
+            "nama": "Safina Ramadhani"
+      },
+      {
+            "nrp": "5001251059",
+            "nama": "Naufal Abiyyu Astama"
+      },
+      {
+            "nrp": "5001251019",
+            "nama": "Denise Jasmine Pradnya Paramita"
+      },
+      {
+            "nrp": "5001251037",
+            "nama": "Amelia Putri Purnamasari"
+      },
+      {
+            "nrp": "5001251064",
+            "nama": "Nabila Aisyah Safitri"
+      },
+      {
+            "nrp": "5001251101",
+            "nama": "Achmad Khavisa Dyota"
+      },
+      {
+            "nrp": "5001251033",
+            "nama": "Laudza Rahmasita"
+      },
+      {
+            "nrp": "5001251096",
+            "nama": "Afina Adjani"
+      },
+      {
+            "nrp": "5001251061",
+            "nama": "Muhammad Revan Fadhillah"
+      },
+      {
+            "nrp": "5001251092",
+            "nama": "Naufal Falah Al Habibi"
+      },
+      {
+            "nrp": "5001251047",
+            "nama": "Dwi Chindy Nopitasari"
+      },
+      {
+            "nrp": "5001251140",
+            "nama": "Kirana Wangsa Wijaya"
+      },
+      {
+            "nrp": "5001251053",
+            "nama": "Dava Ananda Rahma"
+      },
+      {
+            "nrp": "5001251035",
+            "nama": "Yumna Althafunisa"
+      },
+      {
+            "nrp": "5001251009",
+            "nama": "Shafia Assya Nada"
+      },
+      {
+            "nrp": "5001251042",
+            "nama": "Muhammad Ilham Ramdhan"
+      },
+      {
+            "nrp": "5001251048",
+            "nama": "Moureen Astrid Faustine"
+      },
+      {
+            "nrp": "5001251088",
+            "nama": "Jihan Tsabita"
+      },
+      {
+            "nrp": "5001251087",
+            "nama": "Annisa Humairoh"
+      },
+      {
+            "nrp": "5001251052",
+            "nama": "Siti Nadya Amalia"
+      },
+      {
+            "nrp": "5001251100",
+            "nama": "Muhammad Egar Kharisma"
+      },
+      {
+            "nrp": "5001251142",
+            "nama": "Nadia Aulia"
+      },
+      {
+            "nrp": "5001251123",
+            "nama": "Jullie Alvionika Kusumaningtyas"
+      },
+      {
+            "nrp": "5001251108",
+            "nama": "Tsabita Aurelia Putri P."
+      },
+      {
+            "nrp": "5001251034",
+            "nama": "Azahrah Khairunnisaa"
+      },
+      {
+            "nrp": "5001251016",
+            "nama": "Karima Isna Radhiyyah"
+      },
+      {
+            "nrp": "5001251005",
+            "nama": "Nina Arlina"
+      },
+      {
+            "nrp": "5001251145",
+            "nama": "Mira Nuryanti Yulianingsih"
+      },
+      {
+            "nrp": "5001251049",
+            "nama": "Muhammad Rafif Naufal Fadhli"
+      },
+      {
+            "nrp": "5001251029",
+            "nama": "Adnillah Nabilah Taubah"
+      },
+      {
+            "nrp": "5001251055",
+            "nama": "Muhammad Aryan Fawwaz"
+      },
+      {
+            "nrp": "5001251106",
+            "nama": "Wilbert Austin Evan"
+      },
+      {
+            "nrp": "5001251030",
+            "nama": "Tsaqif Abdurrahman Pratama"
+      },
+      {
+            "nrp": "5001251117",
+            "nama": "Zhara Arynda Audia"
+      },
+      {
+            "nrp": "5001251006",
+            "nama": "Humam Ramadhan Mu'in"
+      },
+      {
+            "nrp": "5001251097",
+            "nama": "Odelia Latisha Angelia"
+      },
+      {
+            "nrp": "5001251105",
+            "nama": "Mohammad Rafli"
+      },
+      {
+            "nrp": "5001251004",
+            "nama": "Naufal Akbar Rohiman"
+      },
+      {
+            "nrp": "5001251113",
+            "nama": "Rosi Salma Tsania"
+      },
+      {
+            "nrp": "5001251130",
+            "nama": "Citra Nur Azalia"
+      },
+      {
+            "nrp": "5001251089",
+            "nama": "Naufal Tedy Maulana"
+      },
+      {
+            "nrp": "5001251045",
+            "nama": "Naufal Daffa Ramadhan"
+      },
+      {
+            "nrp": "5001251015",
+            "nama": "M. Akmal Zafran"
+      },
+      {
+            "nrp": "5001251102",
+            "nama": "Valerie Nathania"
+      },
+      {
+            "nrp": "5001251038",
+            "nama": "Ilham Dwi Nurhadi"
+      },
+      {
+            "nrp": "5001251146",
+            "nama": "Yasmine Yusnita"
+      },
+      {
+            "nrp": "5001251138",
+            "nama": "Rafli darma kuswandi"
+      },
+      {
+            "nrp": "5001251012",
+            "nama": "Ayn Al Qodiy Zikri Rahullah"
+      }
+];
+
+    const dataPeserta = {};
+
+    function bersihkanNRP(value) {
+      return String(value || "").trim().replace(/\.0$/, "");
+    }
+
+    function loadDataPeserta() {
+      pesertaList.forEach((peserta) => {
+        const nrp = bersihkanNRP(peserta.nrp);
+        if (nrp) dataPeserta[nrp] = peserta;
+      });
+
+      document.getElementById("loadStatus").textContent =
+        `Data berhasil dimuat. Total ${Object.keys(dataPeserta).length} peserta terdaftar.`;
+
+      document.getElementById("cpGeneral").textContent = CP_GENERAL.label;
+      document.getElementById("cpGeneral").href = CP_GENERAL.url;
+      document.getElementById("cpReschedule").textContent = CP_RESCHEDULE.label;
+      document.getElementById("cpReschedule").href = CP_RESCHEDULE.url;
+    }
+
+    function cekPengumuman() {
+      const input = bersihkanNRP(document.getElementById("nrp").value);
+      const peserta = dataPeserta[input];
+      const error = document.getElementById("error");
+
+      if (!input) {
+        error.style.display = "block";
+        error.textContent = "Masukkan NRP terlebih dahulu.";
+        return;
+      }
+
+      if (!peserta) {
+        error.style.display = "block";
+        error.textContent = "NRP tidak ditemukan. Pastikan NRP yang dimasukkan sudah benar atau hubungi panitia.";
+        return;
+      }
+
+      document.getElementById("namaPeserta").textContent = peserta.nama || "Peserta";
+      document.getElementById("nrpPeserta").textContent = input;
+
+      error.style.display = "none";
+      document.getElementById("inputPage").style.display = "none";
+      document.getElementById("resultPage").style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function kembali() {
+      document.getElementById("resultPage").style.display = "none";
+      document.getElementById("inputPage").style.display = "block";
+      document.getElementById("nrp").value = "";
+      document.getElementById("nrp").focus();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    document.getElementById("nrp").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") cekPengumuman();
+    });
+
+    loadDataPeserta();
+  </script>
+</body>
+</html>
