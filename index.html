@@ -670,434 +670,823 @@
   </main>
 
   <script>
-    const pesertaList = [
-      {
-        nama: "Tia Salsabila",
-        nrp: "5001251137",
-        pos: "POS 4",
-        jadwal: "13.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Muhammad Mukti Yazdan",
-        nrp: "5001251085",
-        pos: "POS 4",
-        jadwal: "13.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Dzaki Ammar Muniif",
-        nrp: "5001251112",
-        pos: "POS 4",
-        jadwal: "13.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Novin Zhafira Kwarisd",
-        nrp: "5001251020",
-        pos: "POS 4",
-        jadwal: "13.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Muhammad Naufal Khalaf",
-        nrp: "5001251078",
-        pos: "POS 4",
-        jadwal: "16.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Muhammad Alfarizi",
-        nrp: "5001251073",
-        pos: "POS 4",
-        jadwal: "16.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Ilyas",
-        nrp: "5001251116",
-        pos: "POS 4",
-        jadwal: "16.00 WIB",
-        cpNama: "Ardan",
-        cpWa: "6288994292632"
-      },
-      {
-        nama: "Ayu Nisa Aprilia",
-        nrp: "5001251080",
-        pos: "POS 4",
-        jadwal: "15.00 WIB",
-        cpNama: "Al",
-        cpWa: "6282191955151"
-      },
-      {
-        nama: "M. Faris Nubaid",
-        nrp: "5001251106",
-        pos: "POS 4",
-        jadwal: "15.00 WIB",
-        cpNama: "Al",
-        cpWa: "6282191955151"
-      },
-      {
-        nama: "Muhammad Rabbani Adnan Al Awali",
-        nrp: "5001251104",
-        pos: "POS 6",
-        jadwal: "15.00 WIB",
-        cpNama: "Al",
-        cpWa: "6282191955151"
-      },
-      {
-        nama: "Muhammad Bayu Ramadhan",
-        nrp: "5001251081",
-        pos: "POS 4",
-        jadwal: "15.00 WIB",
-        cpNama: "Al",
-        cpWa: "6282191955151"
-      },
-      {
-        nama: "Rurry Septantri Kurniawan",
-        nrp: "5001251103",
-        pos: "POS 4",
-        jadwal: "15.00 WIB",
-        cpNama: "Al",
-        cpWa: "6282191955151"
-      },
-      {
-        nama: "Asri Tri Wulan Sari",
-        nrp: "5001251057",
-        pos: "POS 5",
-        jadwal: "15.00 WIB",
-        cpNama: "Aurel",
-        cpWa: "6287784528471"
-      },
-      {
-        nama: "Verlyta Adjitya Purwaningtyas",
-        nrp: "5001251051",
-        pos: "POS 5",
-        jadwal: "15.00 WIB",
-        cpNama: "Aurel",
-        cpWa: "6287784528471"
-      },
-      {
-        nama: "Galang Addia Ramadan",
-        nrp: "5001251029",
-        pos: "POS 5",
-        jadwal: "15.00 WIB",
-        cpNama: "Aurel",
-        cpWa: "6287784528471"
-      },
-      {
-        nama: "Muhammad Yusuf Ryan",
-        nrp: "5001251030",
-        pos: "POS 5",
-        jadwal: "15.00 WIB",
-        cpNama: "Aurel",
-        cpWa: "6287784528471"
-      },
+const pesertaList = [
+  {
+    nama: "Riana Salsabela Putri",
+    nrp: "5001251118",
+    pos: "POS 4",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rama",
+    cpWa: "6285211910805"
+  },
+  {
+    nama: "Muhamad Irfan Hidayatullah",
+    nrp: "5001251009",
+    pos: "POS 4",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rama",
+    cpWa: "6285211910805"
+  },
+  {
+    nama: "Ayn Al Qodiy Zikri Rahullah",
+    nrp: "5001251012",
+    pos: "POS 4",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rama",
+    cpWa: "6285211910805"
+  },
+  {
+    nama: "Nikita Firdausi",
+    nrp: "5001251087",
+    pos: "POS 4",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rama",
+    cpWa: "6285211910805"
+  },
+  {
+    nama: "Dimas Budi Al Bukhori",
+    nrp: "5001251114",
+    pos: "POS 4",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rama",
+    cpWa: "6285211910805"
+  },
+  {
+    nama: "Khansa Zahrotul ‘Arsy",
+    nrp: "5001251093",
+    pos: "POS 4",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rama",
+    cpWa: "6285211910805"
+  },
 
-      {
-        nama: "Wahyu Fauji Sianturi",
-        nrp: "5001251070",
-        pos: "POS 5",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Oktavya Zahra Rachmadhani",
-        nrp: "5001251095",
-        pos: "POS 5",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Ester Salita Br P Bangun",
-        nrp: "5001251062",
-        pos: "POS 5",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Julia Cinta Az Zahra",
-        nrp: "5001251131",
-        pos: "POS 5",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Hanifa Nabi'il Wining",
-        nrp: "5001251022",
-        pos: "POS 6",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Fazle Mawla Febrio Rhizky",
-        nrp: "5001251145",
-        pos: "POS 6",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Muhammad Arnico Natha",
-        nrp: "5001251150",
-        pos: "POS 6",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
-      {
-        nama: "Naufal Abid Affandi",
-        nrp: "5001251151",
-        pos: "POS 6",
-        jadwal: "11.00 WIB",
-        cpNama: "Danang",
-        cpWa: "62895329260303"
-      },
+  {
+    nama: "Tia Salsabila",
+    nrp: "5001251137",
+    pos: "POS 4",
+    jadwal: "13.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Muhammad Mukti Yazdan",
+    nrp: "5001251085",
+    pos: "POS 4",
+    jadwal: "13.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Dzaki Ammar Muniif",
+    nrp: "5001251112",
+    pos: "POS 4",
+    jadwal: "13.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Novin Zhafira Kwarisd",
+    nrp: "5001251020",
+    pos: "POS 4",
+    jadwal: "13.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Muhammad Naufal Khalaf",
+    nrp: "5001251078",
+    pos: "POS 4",
+    jadwal: "16.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Muhammad Alfarizi",
+    nrp: "5001251073",
+    pos: "POS 4",
+    jadwal: "16.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Ilyas",
+    nrp: "5001251116",
+    pos: "POS 4",
+    jadwal: "16.00 WIB",
+    cpNama: "Ardan",
+    cpWa: "6288994292632"
+  },
+  {
+    nama: "Ayu Nisa Aprilia",
+    nrp: "5001251080",
+    pos: "POS 4",
+    jadwal: "15.00 WIB",
+    cpNama: "Al",
+    cpWa: "6282191955151"
+  },
+  {
+    nama: "M. Faris Nubaid",
+    nrp: "5001251106",
+    pos: "POS 4",
+    jadwal: "15.00 WIB",
+    cpNama: "Al",
+    cpWa: "6282191955151"
+  },
+  {
+    nama: "Muhammad Rabbani Adnan Al Awali",
+    nrp: "5001251104",
+    pos: "POS 6",
+    jadwal: "15.00 WIB",
+    cpNama: "Al",
+    cpWa: "6282191955151"
+  },
+  {
+    nama: "Muhammad Bayu Ramadhan",
+    nrp: "5001251081",
+    pos: "POS 4",
+    jadwal: "15.00 WIB",
+    cpNama: "Al",
+    cpWa: "6282191955151"
+  },
+  {
+    nama: "Rurry Septantri Kurniawan",
+    nrp: "5001251103",
+    pos: "POS 4",
+    jadwal: "15.00 WIB",
+    cpNama: "Al",
+    cpWa: "6282191955151"
+  },
+  {
+    nama: "Asri Tri Wulan Sari",
+    nrp: "5001251057",
+    pos: "POS 5",
+    jadwal: "15.00 WIB",
+    cpNama: "Aurel",
+    cpWa: "6287784528471"
+  },
+  {
+    nama: "Verlyta Adjitya Purwaningtyas",
+    nrp: "5001251051",
+    pos: "POS 5",
+    jadwal: "15.00 WIB",
+    cpNama: "Aurel",
+    cpWa: "6287784528471"
+  },
+  {
+    nama: "Galang Addia Ramadan",
+    nrp: "5001251029",
+    pos: "POS 5",
+    jadwal: "15.00 WIB",
+    cpNama: "Aurel",
+    cpWa: "6287784528471"
+  },
+  {
+    nama: "Muhammad Yusuf Ryan",
+    nrp: "5001251030",
+    pos: "POS 5",
+    jadwal: "15.00 WIB",
+    cpNama: "Aurel",
+    cpWa: "6287784528471"
+  },
 
-      {
-        nama: "Athian Syafiq Al Hafidz",
-        nrp: "5001251094",
-        pos: "POS 4",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Abil Qumfa Anzir",
-        nrp: "5001251018",
-        pos: "POS 4",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Adinda Ayu Anandita",
-        nrp: "5001251135",
-        pos: "POS 2",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Jasmine Raqilla Mirza",
-        nrp: "5001251117",
-        pos: "POS 2",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "O'neall Dewata Giovani",
-        nrp: "5001251098",
-        pos: "POS 4",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Khoirun Nisa",
-        nrp: "5001251088",
-        pos: "POS 4",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Ahmad Satrio Wicaksono",
-        nrp: "5001251017",
-        pos: "POS 2",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Maria Rachel Jochi Carmelita Gurning",
-        nrp: "5001251007",
-        pos: "POS 2",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Dewanda Angga Prameswara",
-        nrp: "5001251128",
-        pos: "POS 2",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Nahilah",
-        nrp: "5001251044",
-        pos: "POS 4",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
-      {
-        nama: "Sonya Wadi Rahmawati",
-        nrp: "5001251038",
-        pos: "POS 4",
-        jadwal: "11.00 WIB",
-        cpNama: "Roy",
-        cpWa: "6282258992945"
-      },
+  {
+    nama: "Wahyu Fauji Sianturi",
+    nrp: "5001251070",
+    pos: "POS 5",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Oktavya Zahra Rachmadhani",
+    nrp: "5001251095",
+    pos: "POS 5",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Ester Salita Br P Bangun",
+    nrp: "5001251062",
+    pos: "POS 5",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Julia Cinta Az Zahra",
+    nrp: "5001251131",
+    pos: "POS 5",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Hanifa Nabi'il Wining",
+    nrp: "5001251022",
+    pos: "POS 6",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Fazle Mawla Febrio Rhizky",
+    nrp: "5001251145",
+    pos: "POS 6",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Muhammad Arnico Natha",
+    nrp: "5001251150",
+    pos: "POS 6",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
+  {
+    nama: "Naufal Abid Affandi",
+    nrp: "5001251151",
+    pos: "POS 6",
+    jadwal: "11.00 WIB",
+    cpNama: "Danang",
+    cpWa: "62895329260303"
+  },
 
-      {
-        nama: "Davina Makayla Inaira W.",
-        nrp: "5001251032",
-        pos: "POS 3",
-        jadwal: "09.00–10.00 WIB",
-        cpNama: "Rafli",
-        cpWa: "6282132929692"
-      },
-      {
-        nama: "Ronalius Chaniago",
-        nrp: "5001251069",
-        pos: "POS 3",
-        jadwal: "09.00–10.00 WIB",
-        cpNama: "Rafli",
-        cpWa: "6282132929692"
-      },
-      {
-        nama: "Nadin Agistina",
-        nrp: "5001251071",
-        pos: "POS 3",
-        jadwal: "09.00–10.00 WIB",
-        cpNama: "Rafli",
-        cpWa: "6282132929692"
-      },
-      {
-        nama: "Tazkia Nafsia Az-zahra",
-        nrp: "5001251036",
-        pos: "POS 3",
-        jadwal: "10.00–11.00 WIB",
-        cpNama: "Rafli",
-        cpWa: "6282132929692"
-      },
-      {
-        nama: "Nafa Savira Putri Wijaya",
-        nrp: "5001251101",
-        pos: "POS 3",
-        jadwal: "10.00–11.00 WIB",
-        cpNama: "Rafli",
-        cpWa: "6282132929692"
-      },
-      {
-        nama: "Nadina Ayu Yasyfa",
-        nrp: "5001251134",
-        pos: "POS 3",
-        jadwal: "10.00–11.00 WIB",
-        cpNama: "Rafli",
-        cpWa: "6282132929692"
-      },
-      {
-        nama: "Nindya Nur Azalia",
-        nrp: "5001251092",
-        pos: "POS 3",
-        jadwal: "11.00–12.00 WIB",
-        cpNama: "Andina",
-        cpWa: "6288211090855"
-      },
-      {
-        nama: "Dewi Laras Kusumawati",
-        nrp: "5001251060",
-        pos: "POS 3",
-        jadwal: "11.00–12.00 WIB",
-        cpNama: "Andina",
-        cpWa: "6288211090855"
-      },
-      {
-        nama: "Tahta Wasiyyatul Hidayah",
-        nrp: "5001251052",
-        pos: "POS 3",
-        jadwal: "11.00–12.00 WIB",
-        cpNama: "Andina",
-        cpWa: "6288211090855"
-      },
-      {
-        nama: "Dely Ellizha Putri Aji",
-        nrp: "5001251156",
-        pos: "POS 1",
-        jadwal: "12.00–13.00 WIB",
-        cpNama: "Andina",
-        cpWa: "6288211090855"
-      },
-      {
-        nama: "Imroatul Khusniah",
-        nrp: "5001251133",
-        pos: "POS 1",
-        jadwal: "12.00–13.00 WIB",
-        cpNama: "Andina",
-        cpWa: "6288211090855"
-      },
-      {
-        nama: "Muhammad Arifin Siregar Pahu",
-        nrp: "5001251153",
-        pos: "POS 1",
-        jadwal: "12.00–13.00 WIB",
-        cpNama: "Andina",
-        cpWa: "6288211090855"
-      },
-      {
-        nama: "Rennanditya Virta Nanda Pintoko",
-        nrp: "5001251001",
-        pos: "POS 1",
-        jadwal: "11.00–12.00 WIB",
-        cpNama: "Aya",
-        cpWa: "6285713319241"
-      },
-      {
-        nama: "Poendra Ragil Bagoes Wiwandra",
-        nrp: "5001251157",
-        pos: "POS 1",
-        jadwal: "11.00–12.00 WIB",
-        cpNama: "Aya",
-        cpWa: "6285713319241"
-      },
-      {
-        nama: "Syifa Meilina Azzahra",
-        nrp: "5001251066",
-        pos: "POS 1",
-        jadwal: "11.00–12.00 WIB",
-        cpNama: "Aya",
-        cpWa: "6285713319241"
-      },
-      {
-        nama: "Danish Zinedine Putra Ramadhan",
-        nrp: "5001251079",
-        pos: "POS 1",
-        jadwal: "13.00–14.00 WIB",
-        cpNama: "Aya",
-        cpWa: "6285713319241"
-      },
-      {
-        nama: "Bunga Ayu Agustina Putri",
-        nrp: "5001251045",
-        pos: "POS 1",
-        jadwal: "13.00–14.00 WIB",
-        cpNama: "Aya",
-        cpWa: "6285713319241"
-      },
-      {
-        nama: "Novriansyah Satria",
-        nrp: "5001251142",
-        pos: "POS 1",
-        jadwal: "13.00–14.00 WIB",
-        cpNama: "Aya",
-        cpWa: "6285713319241"
-      }
+  {
+    nama: "Athian Syafiq Al Hafidz",
+    nrp: "5001251094",
+    pos: "POS 4",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Abil Qumfa Anzir",
+    nrp: "5001251018",
+    pos: "POS 4",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Adinda Ayu Anandita",
+    nrp: "5001251135",
+    pos: "POS 2",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Jasmine Raqilla Mirza",
+    nrp: "5001251117",
+    pos: "POS 2",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "O'neall Dewata Giovani",
+    nrp: "5001251098",
+    pos: "POS 4",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Khoirun Nisa",
+    nrp: "5001251088",
+    pos: "POS 4",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Ahmad Satrio Wicaksono",
+    nrp: "5001251017",
+    pos: "POS 2",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Maria Rachel Jochi Carmelita Gurning",
+    nrp: "5001251007",
+    pos: "POS 2",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Dewanda Angga Prameswara",
+    nrp: "5001251128",
+    pos: "POS 2",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Nahilah",
+    nrp: "5001251044",
+    pos: "POS 4",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+  {
+    nama: "Sonya Wadi Rahmawati",
+    nrp: "5001251038",
+    pos: "POS 4",
+    jadwal: "11.00 WIB",
+    cpNama: "Roy",
+    cpWa: "6282258992945"
+  },
+
+  {
+    nama: "Mohammad Farhan Alwanul Faizin",
+    nrp: "5001251082",
+    pos: "POS 3",
+    jadwal: "14.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Rosalina Sijabat",
+    nrp: "5001251059",
+    pos: "POS 3",
+    jadwal: "14.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Fahad Dzaky Abdillah",
+    nrp: "5001251004",
+    pos: "POS 3",
+    jadwal: "14.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Rafli Darma Kuswandi",
+    nrp: "5001251138",
+    pos: "POS 3",
+    jadwal: "14.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Bima Prakasa Setiawanda",
+    nrp: "5001251152",
+    pos: "POS 3",
+    jadwal: "14.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Hasna Puspakitri Dewi",
+    nrp: "5001251084",
+    pos: "POS 3",
+    jadwal: "15.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Najwa Oktavia Ramadhani",
+    nrp: "5001251046",
+    pos: "POS 3",
+    jadwal: "15.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Daniel Baglrene Krista Caraka",
+    nrp: "5001251144",
+    pos: "POS 3",
+    jadwal: "15.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Aidil Praditya Oktavianto",
+    nrp: "5001251005",
+    pos: "POS 3",
+    jadwal: "15.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Muhammad Rafi`ul Tsany",
+    nrp: "5001251090",
+    pos: "POS 3",
+    jadwal: "16.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Deva Putra Pratama",
+    nrp: "5001251136",
+    pos: "POS 3",
+    jadwal: "16.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+  {
+    nama: "Giffar Fahrezi",
+    nrp: "5001251016",
+    pos: "POS 3",
+    jadwal: "16.00 WIB",
+    cpNama: "Veby",
+    cpWa: "6282333010978"
+  },
+
+  {
+    nama: "Fajar Faizal",
+    nrp: "5001251100",
+    pos: "POS 2",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Adya Rifhatussholikhah",
+    nrp: "5001251111",
+    pos: "POS 2",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Aditya Apriansyah",
+    nrp: "5001251119",
+    pos: "POS 2",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Nashya Devanty Putri Walujo",
+    nrp: "5001251141",
+    pos: "POS 2",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Arya Putra Laksmana",
+    nrp: "5001251041",
+    pos: "POS 3",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Elghan Reynatan Artadi",
+    nrp: "5001251107",
+    pos: "POS 3",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Zaidan Fayyadh Ramadhan",
+    nrp: "5001251123",
+    pos: "POS 3",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Nabeel Fatkhan Mubina",
+    nrp: "5001251083",
+    pos: "POS 3",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Argata Viradya Putra Hariesna",
+    nrp: "5001251054",
+    pos: "POS 2",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Muhammad Aryan Yudha Tama",
+    nrp: "5001251043",
+    pos: "POS 2",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Hamim Ayatullah",
+    nrp: "5001251148",
+    pos: "POS 2",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Calvin Alifian Putra Pradana",
+    nrp: "5001251035",
+    pos: "POS 2",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Rifqi Azril Firdaus",
+    nrp: "5001251132",
+    pos: "POS 2",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "M Azis Fatchur Ramdhani",
+    nrp: "5001251089",
+    pos: "POS 3",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Muhammad Wafy Al Ahdi K.H",
+    nrp: "5001251108",
+    pos: "POS 3",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Leonardus Adhittya Ande Sura",
+    nrp: "5001251086",
+    pos: "POS 3",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+  {
+    nama: "Kadek Wira Darpawan",
+    nrp: "5001251125",
+    pos: "POS 3",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Theo",
+    cpWa: "6282143645036"
+  },
+
+  {
+    nama: "Eca Agustin Rahmawati",
+    nrp: "5001251039",
+    pos: "POS 6",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Lohita Sitaresmi",
+    nrp: "5001251033",
+    pos: "POS 6",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Dimas Tri Baskoro",
+    nrp: "5001251050",
+    pos: "POS 6",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Ikmil Aidida",
+    nrp: "5001251024",
+    pos: "POS 6",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Teguh Agus Susanto",
+    nrp: "5001251023",
+    pos: "POS 6",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Kenar Ayu Setyahani",
+    nrp: "5001251113",
+    pos: "POS 6",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Anggun Mili Natasya Lubis",
+    nrp: "5001251025",
+    pos: "POS 6",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Fairys Lintang Jannah",
+    nrp: "5001251048",
+    pos: "POS 6",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+  {
+    nama: "Rayhan Arqam Hidayatullah",
+    nrp: "5001251126",
+    pos: "POS 6",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Rifqi",
+    cpWa: "628993330818"
+  },
+
+  {
+    nama: "Davina Makayla Inaira W.",
+    nrp: "5001251032",
+    pos: "POS 3",
+    jadwal: "09.00–10.00 WIB",
+    cpNama: "Rafli",
+    cpWa: "6282132929692"
+  },
+  {
+    nama: "Ronalius Chaniago",
+    nrp: "5001251069",
+    pos: "POS 3",
+    jadwal: "09.00–10.00 WIB",
+    cpNama: "Rafli",
+    cpWa: "6282132929692"
+  },
+  {
+    nama: "Nadin Agistina",
+    nrp: "5001251071",
+    pos: "POS 3",
+    jadwal: "09.00–10.00 WIB",
+    cpNama: "Rafli",
+    cpWa: "6282132929692"
+  },
+  {
+    nama: "Tazkia Nafsia Az-zahra",
+    nrp: "5001251036",
+    pos: "POS 3",
+    jadwal: "10.00–11.00 WIB",
+    cpNama: "Rafli",
+    cpWa: "6282132929692"
+  },
+  {
+    nama: "Nafa Savira Putri Wijaya",
+    nrp: "5001251101",
+    pos: "POS 3",
+    jadwal: "10.00–11.00 WIB",
+    cpNama: "Rafli",
+    cpWa: "6282132929692"
+  },
+  {
+    nama: "Nadina Ayu Yasyfa",
+    nrp: "5001251134",
+    pos: "POS 3",
+    jadwal: "10.00–11.00 WIB",
+    cpNama: "Rafli",
+    cpWa: "6282132929692"
+  },
+  {
+    nama: "Nindya Nur Azalia",
+    nrp: "5001251092",
+    pos: "POS 3",
+    jadwal: "11.00–12.00 WIB",
+    cpNama: "Andina",
+    cpWa: "6288211090855"
+  },
+  {
+    nama: "Dewi Laras Kusumawati",
+    nrp: "5001251060",
+    pos: "POS 3",
+    jadwal: "11.00–12.00 WIB",
+    cpNama: "Andina",
+    cpWa: "6288211090855"
+  },
+  {
+    nama: "Tahta Wasiyyatul Hidayah",
+    nrp: "5001251052",
+    pos: "POS 3",
+    jadwal: "11.00–12.00 WIB",
+    cpNama: "Andina",
+    cpWa: "6288211090855"
+  },
+  {
+    nama: "Dely Ellizha Putri Aji",
+    nrp: "5001251156",
+    pos: "POS 1",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Andina",
+    cpWa: "6288211090855"
+  },
+  {
+    nama: "Imroatul Khusniah",
+    nrp: "5001251133",
+    pos: "POS 1",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Andina",
+    cpWa: "6288211090855"
+  },
+  {
+    nama: "Muhammad Arifin Siregar Pahu",
+    nrp: "5001251153",
+    pos: "POS 1",
+    jadwal: "12.00–13.00 WIB",
+    cpNama: "Andina",
+    cpWa: "6288211090855"
+  },
+  {
+    nama: "Rennanditya Virta Nanda Pintoko",
+    nrp: "5001251001",
+    pos: "POS 1",
+    jadwal: "11.00–12.00 WIB",
+    cpNama: "Aya",
+    cpWa: "6285713319241"
+  },
+  {
+    nama: "Poendra Ragil Bagoes Wiwandra",
+    nrp: "5001251157",
+    pos: "POS 1",
+    jadwal: "11.00–12.00 WIB",
+    cpNama: "Aya",
+    cpWa: "6285713319241"
+  },
+  {
+    nama: "Syifa Meilina Azzahra",
+    nrp: "5001251066",
+    pos: "POS 1",
+    jadwal: "11.00–12.00 WIB",
+    cpNama: "Aya",
+    cpWa: "6285713319241"
+  },
+  {
+    nama: "Danish Zinedine Putra Ramadhan",
+    nrp: "5001251079",
+    pos: "POS 1",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Aya",
+    cpWa: "6285713319241"
+  },
+  {
+    nama: "Bunga Ayu Agustina Putri",
+    nrp: "5001251045",
+    pos: "POS 1",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Aya",
+    cpWa: "6285713319241"
+  },
+  {
+    nama: "Novriansyah Satria",
+    nrp: "5001251142",
+    pos: "POS 1",
+    jadwal: "13.00–14.00 WIB",
+    cpNama: "Aya",
+    cpWa: "6285713319241"
+  },
+
+  {
+    nama: "Savina Muzdalifa",
+    nrp: "5001251055",
+    pos: "POS 5",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rista",
+    cpWa: "6281359773585"
+  },
+  {
+    nama: "Neysa Putri Aurelia",
+    nrp: "5001251158",
+    pos: "POS 5",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rista",
+    cpWa: "6281359773585"
+  },
+  {
+    nama: "Anandio Muhammad Abyan Hafish",
+    nrp: "5001251064",
+    pos: "POS 5",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rista",
+    cpWa: "6281359773585"
+  },
+  {
+    nama: "Diki Adam Maulana",
+    nrp: "5001251058",
+    pos: "POS 5",
+    jadwal: "14.00–15.00 WIB",
+    cpNama: "Rista",
+    cpWa: "6281359773585"
+  }
     ];
 
     const pesertaDitolak = [
