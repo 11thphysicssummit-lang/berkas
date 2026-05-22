@@ -320,7 +320,8 @@
       font-weight: 600;
     }
 
-    #resultPage {
+    #resultPage,
+    #rejectPage {
       display: none;
     }
 
@@ -337,6 +338,10 @@
       line-height: 1.05;
       margin-bottom: 8px;
       text-transform: none;
+    }
+
+    .reject-kicker {
+      color: #ff8fcb;
     }
 
     .result-title {
@@ -426,6 +431,13 @@
       font-weight: 600;
       line-height: 1.65;
       text-align: left;
+    }
+
+    .reject-note {
+      background: rgba(255, 103, 179, 0.10);
+      border: 1px solid rgba(255, 103, 179, 0.25);
+      color: #ffdceb;
+      text-align: center;
     }
 
     .back-btn {
@@ -627,6 +639,29 @@
           3. Peserta diwajibkan berpakaian rapi dan sopan.
           <br><br>
           Apabila berhalangan hadir pada jadwal awal, peserta dapat menghubungi CP yang tertera.
+        </p>
+
+        <button class="back-btn" onclick="kembali()">Cek NRP lain</button>
+      </div>
+    </section>
+
+    <section class="card" id="rejectPage">
+      <div class="result-card">
+        <p class="kicker reject-kicker">Mohon Maaf</p>
+        <h2 class="result-title">Kamu Belum Lolos Berkas</h2>
+
+        <div class="name-box">
+          <span id="namaDitolak">-</span> · <span id="nrpDitolak">-</span>
+        </div>
+
+        <p class="result-text">
+          Terima kasih atas antusiasme dan partisipasimu dalam proses rekrutmen Staff Partner
+          11th Physics Summit. Setelah melalui proses seleksi berkas, kamu dinyatakan
+          <strong>belum lolos seleksi berkas</strong>.
+        </p>
+
+        <p class="note reject-note">
+          Tetap semangat dan jangan berkecil hati. Semoga kesempatan baik lainnya dapat hadir di waktu berikutnya.
         </p>
 
         <button class="back-btn" onclick="kembali()">Cek NRP lain</button>
@@ -1065,7 +1100,23 @@
       }
     ];
 
+    const pesertaDitolak = [
+      {
+        nama: "Bintang Pratama Jeriansyah",
+        nrp: "5001251129"
+      },
+      {
+        nama: "Raymond Benaya Kondamara Tidah",
+        nrp: "5001251026"
+      },
+      {
+        nama: "Yefi Ragelia Marshadani",
+        nrp: "5001251127"
+      }
+    ];
+
     const dataPeserta = {};
+    const dataDitolak = {};
 
     function bersihkanNRP(value) {
       return String(value || "").trim();
@@ -1074,6 +1125,10 @@
     function loadDataPeserta() {
       pesertaList.forEach(function(peserta) {
         dataPeserta[peserta.nrp] = peserta;
+      });
+
+      pesertaDitolak.forEach(function(peserta) {
+        dataDitolak[peserta.nrp] = peserta;
       });
     }
 
@@ -1094,11 +1149,24 @@
     function cekPengumuman() {
       const input = bersihkanNRP(document.getElementById("nrp").value);
       const peserta = dataPeserta[input];
+      const ditolak = dataDitolak[input];
       const error = document.getElementById("error");
 
       if (!input) {
         error.style.display = "block";
         error.textContent = "Masukkan NRP terlebih dahulu.";
+        return;
+      }
+
+      if (ditolak) {
+        document.getElementById("namaDitolak").textContent = ditolak.nama;
+        document.getElementById("nrpDitolak").textContent = ditolak.nrp;
+
+        error.style.display = "none";
+        document.getElementById("inputPage").style.display = "none";
+        document.getElementById("resultPage").style.display = "none";
+        document.getElementById("rejectPage").style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }
 
@@ -1117,12 +1185,14 @@
 
       error.style.display = "none";
       document.getElementById("inputPage").style.display = "none";
+      document.getElementById("rejectPage").style.display = "none";
       document.getElementById("resultPage").style.display = "block";
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function kembali() {
       document.getElementById("resultPage").style.display = "none";
+      document.getElementById("rejectPage").style.display = "none";
       document.getElementById("inputPage").style.display = "block";
       document.getElementById("nrp").value = "";
       document.getElementById("nrp").focus();
