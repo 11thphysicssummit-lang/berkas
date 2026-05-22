@@ -425,6 +425,7 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 1.65;
+      text-align: left;
     }
 
     .back-btn {
@@ -604,7 +605,7 @@
 
         <p class="result-text">
           Kamu dinyatakan <strong>lolos seleksi berkas Staff Partner 11th Physics Summit</strong>.
-          Silakan cek denah pos dan hubungi CP apabila membutuhkan informasi jadwal wawancara susulan.
+          Silakan cek denah pos dan hubungi CP apabila membutuhkan informasi jadwal seleksi lanjutan susulan.
         </p>
 
         <div class="action-grid">
@@ -617,9 +618,15 @@
         </div>
 
         <p class="note">
-          Peserta wawancara wajib hadir 10 menit sebelum jadwal seleksi lanjutan dimulai.
+          <strong>Teknis Seleksi Lanjutan:</strong>
           <br><br>
-          Apabila berhalangan hadir pada jadwal awal, silakan menghubungi CP sesuai jadwal yang tertera.
+          1. Setiap peserta seleksi lanjutan wajib hadir 10 menit sebelum jadwal dimulai.
+          <br>
+          2. Apabila sudah hadir di tempat dan terdapat divisi lain yang masih melaksanakan seleksi lanjutan, peserta diharapkan tetap kondusif.
+          <br>
+          3. Peserta diwajibkan berpakaian rapi dan sopan.
+          <br><br>
+          Apabila berhalangan hadir pada jadwal awal, peserta dapat menghubungi CP yang tertera.
         </p>
 
         <button class="back-btn" onclick="kembali()">Cek NRP lain</button>
@@ -845,13 +852,13 @@
 
     function buatLinkWA(peserta) {
       const pesan =
-        "Halo Kak " + peserta.cpNama + ", saya ingin meminta informasi mengenai jadwal wawancara susulan Staff Partner 11th Physics Summit.\n\n" +
+        "Halo Kak " + peserta.cpNama + ", saya ingin meminta informasi mengenai jadwal seleksi lanjutan susulan Staff Partner 11th Physics Summit.\n\n" +
         "Data diri:\n" +
         "Nama: " + peserta.nama + "\n" +
         "NRP: " + peserta.nrp + "\n" +
         "Pos: " + peserta.pos + "\n" +
         "Jadwal awal: " + peserta.jadwal + "\n\n" +
-        "Saya berhalangan hadir pada jadwal awal tersebut. Mohon informasi terkait jadwal wawancara susulan yang tersedia.\n\n" +
+        "Saya berhalangan hadir pada jadwal awal tersebut. Mohon informasi terkait jadwal seleksi lanjutan susulan yang tersedia.\n\n" +
         "Terima kasih.";
 
       return "https://wa.me/" + peserta.cpWa + "?text=" + encodeURIComponent(pesan);
